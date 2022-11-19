@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Dashboard from './Dashboard';
+import Todo from './Todo/Todo';
+import Pomodoro from './Pomodoro/Pomodoro';
+import Footer from './Footer'
 
+const styles = {
+  bg: `bg-main h-screen relative `, 
+  container: `flex bg-main`,
+  contTodo: `flex-1 flex items-center justify-center`,
+  cont: `flex-1 flex justify-center`,
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.bg} >
+      <Dashboard />
+      <div className={styles.container}>
+      <div  className={styles.contTodo}>
+      <Todo/>
+      </div>
+      <div className={styles.cont}>
+      <Pomodoro />
+      </div>
+      </div>
+      <Footer/>
     </div>
   );
 }
