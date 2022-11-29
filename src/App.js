@@ -6,7 +6,7 @@ import Footer from './Footer'
 
 const styles = {
   bg: `bg-main h-screen relative `, 
-  container: `flex bg-main`,
+  container: `flex flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row bg-main`,
   contTodo: `flex-1 flex items-center justify-center`,
   cont: `flex-1 flex justify-center`,
 }
